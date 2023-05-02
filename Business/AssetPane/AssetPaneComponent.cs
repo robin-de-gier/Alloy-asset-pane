@@ -3,7 +3,8 @@ using EPiServer.Shell.ViewComposition;
 
 namespace alloy_docker.Business.AssetPane;
 
-public class AssetPaneComponent : ComponentDefinitionBase
+[Component]
+public sealed class AssetPaneComponent : ComponentDefinitionBase
 {
     public AssetPaneComponent()
         : base("epi-cms/asset/HierarchicalList")

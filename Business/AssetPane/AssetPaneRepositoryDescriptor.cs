@@ -11,7 +11,11 @@ public class AssetPaneRepositoryDescriptor : MediaRepositoryDescriptor
         _root = contentRootService.Get(AssetPaneSettings.ProviderName);
     }
 
-    private static string RepositoryKey => AssetPaneSettings.ProviderKey;
+    public override string CustomNavigationWidget => "epi-cms/component/ContentNavigationTree";
+
+    public override string CustomSelectTitle => AssetPaneSettings.ProviderName;
+
+    private new static string RepositoryKey => AssetPaneSettings.ProviderKey;
 
     public override string Key => RepositoryKey;
 
