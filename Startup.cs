@@ -1,3 +1,4 @@
+using alloy_docker.Business.AssetPane;
 using alloy_docker.Extensions;
 using EPiServer.Cms.Shell;
 using EPiServer.Cms.UI.AspNetIdentity;
@@ -30,7 +31,8 @@ public class Startup
             .AddCms()
             .AddAlloy()
             .AddAdminUserRegistration()
-            .AddEmbeddedLocalization<Startup>();
+            .AddEmbeddedLocalization<Startup>()
+            .AddAssetPaneContent();
 
         // Required by Wangkanai.Detection
         services.AddDetection();
